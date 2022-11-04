@@ -15,6 +15,10 @@ function onFormSubmit(event) {
   event.preventDefault();
   const consoleMassage = JSON.parse(localStorage.getItem(LOCAL_KEY));
 
+  if (!consoleMassage) {
+    return;
+  }
+
   console.log(consoleMassage);
 
   localStorage.removeItem(LOCAL_KEY);
